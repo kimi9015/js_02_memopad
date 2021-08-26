@@ -1,0 +1,241 @@
+/* タイトル */
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #da3c41;
+    font-size: larger;
+}
+
+/* 背景画像の挿入 */
+body {
+    background-image: url(../img/haikei_kinntore.jpeg);
+    background-size: 350px;
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+}
+
+/* 鍛えた部位*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+/* 鍛えた部位と有酸素運動のアイテムを横並べ */
+.yokonarabe1 {
+    display: flex;
+    width: 100%;
+}
+
+
+.bui {
+    width: 20%;
+    padding-left: 200px;
+}
+
+.wrapper {
+    width: 33%;
+    text-align: center;
+}
+
+.yu-sanso {
+    width: 33%;
+}
+
+.boxes {
+    padding: 30px;
+}
+
+
+
+
+/* チェックボックスのスタイル */
+
+input[type="checkbox"] { 
+    display: none; 
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  color: black;
+  font-size: larger;
+  cursor: pointer;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; */
+}
+
+input[type="checkbox"] + label:last-child { 
+    margin-bottom: 0; 
+}
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #6cc0e5;
+  border-width: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* 曜日選択、記録する・クリアボタン */
+
+
+.cp_ipselect {
+	overflow: hidden;
+	width: 30%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl04 {
+	position: relative;
+	border-radius: 2px;
+	border: 2px solid #da3c41;
+  border-radius: 50px;
+	background: #ffffff;
+}
+.cp_ipselect.cp_sl04::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.8em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #da3c41;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl04 select {
+	padding: 8px 38px 8px 8px;
+	color: #da3c41;
+}
+
+
+/* ボタンを円形に */
+.button_kiroku {
+    display: inline-block;
+    text-decoration: none;
+    background: #fdd887;
+    color:red;
+    font-weight: bolder;
+    font-size: large;
+    width: 150px;
+    height: 150px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #fdd887;
+    border: dashed 1px #FFF;
+    transition: .4s;
+}
+
+.button_kiroku:hover {
+    background: #d8d666;
+    box-shadow: 0px 0px 0px 5px #d8d666;
+}
+
+.button_clear {
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    font-size: large;
+    color: #FFF;
+    width: 150px;
+    height: 150px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+}
+
+.button_clear:hover {
+    background: #668ad8;
+    box-shadow: 0px 0px 0px 5px #668ad8;
+}
+
+
+
+
+/* <有酸素運動<エアロバイク> */
+
+.subtitle {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#PassageArea{
+    font-size:42px;
+    border:5px solid black;
+    padding:20px;
+    width:100px;
+    margin:0px auto;
+ }
+
+ /* 鍛えた部位とエアロバイクを漕いだ時間を表示する（グラフ算出用） */
+
+ table {
+     margin: auto;
+     text-align: center;
+     font-weight: bolder;
+     border-collapse: collapse;
+     border: solid 2px black;
+     width: 500px;
+ }
+
+ th,td{
+     border: dashed 1px black;
+ }
+
+ th {
+    background-color: rgb(208, 255, 0);
+ }
+
+
+
+
+

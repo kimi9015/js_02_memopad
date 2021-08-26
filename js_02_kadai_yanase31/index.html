@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>筋トレ記録アプリ</title>
+</head>
+<body>
+
+<!-- タイトル -->
+<h1>筋トレ記録アプリ〜継続は力なり〜</h1>
+
+
+<!-- 鍛えた部位 -->
+
+<div class="yokonarabe1">
+
+    <div class="bui" id="kitaetabui">
+        <h2>鍛えた部位</h2>
+
+        <div class="boxes">
+            <input type="checkbox" id="box-1" name="bui" value="胸">
+            <label for="box-1">胸</label>
+
+            <input type="checkbox" id="box-2" name="bui" value="肩">
+            <label for="box-2">肩</label>
+
+            <input type="checkbox" id="box-3" name="bui" value="腕">
+            <label for="box-3">腕</label>
+
+            <input type="checkbox" id="box-4" name="bui" value="腹筋">
+            <label for="box-4">腹筋</label>
+
+            <input type="checkbox" id="box-5" name="bui" value="脚">
+            <label for="box-5">脚</label>
+        </div>
+
+    </div>
+
+<!--  曜日選択、記録する・クリアボタン-->
+
+    <div class="wrapper">
+
+        <div class="cp_ipselect cp_sl04">
+            <select name="name1" id="checkbox_youbi">
+                <option value="" hidden>曜日を選択</option>
+                <option value="月">月</option>
+                <option value="火">火</option>
+                <option value="水">水</option>
+                <option value="木">木</option>
+                <option value="金">金</option>
+                <option value="土">土</option>
+                <option value="日">日</option>
+            </select>
+        </div>
+    
+        <button class="button_kiroku" id="kirokusuru">記録する！</button>
+        <button class="button_clear" id="kuriasuru">Clear</button>
+    
+    </div>
+
+ 
+<!-- 有酸素運動（エアロバイク） -->
+
+
+    <div style="text-align: center;" class="yu-sanso">
+
+        <h2>有酸素運動-エアロバイク-（秒）</h2>
+
+            <p class="sub_title">追い込み・休憩をテンポよく！</p>
+
+            <div class="container mt-5">
+                <div id="PassageArea">0</div>
+            </div>
+            
+            <div class="container mt-5">
+                <input type="number" id="number" min=1 value=5 style="width:80px;">
+            </div>
+            
+            <div class="container mt-5">
+                <button class="btn btn-primary" id="startcount" onclick="startShowing();">カウント開始</button>
+                <button class="btn btn-primary" id="endcount" onclick="stopShowing();">カウント停止</button>
+            </div>
+        </div>
+
+            <audio id="sound-file1" preload="auto">
+                <source src="beep1.mp3" type="audio/mp3">
+            </audio>
+
+            <audio id="sound-file2" preload="auto">
+                <source src="beep2.mp3" type="audio/mp3">
+            </audio>
+        
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- 鍛えた部位とエアロバイクを漕いだ時間を表示する（グラフ算出用） -->
+
+<table id="list">
+    <tr>
+        <th>曜日</th>
+        <th>筋トレで鍛えた部位</th>
+        <th>エアロバイクを漕いだ時間（分）</th>
+    </tr>
+</table>
+
+
+
+</div>
+
+
+
+
+
+<!-- jQuery読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- JS読み込み -->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
